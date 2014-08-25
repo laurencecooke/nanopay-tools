@@ -10,7 +10,7 @@ var $promise = require('bluebird');
 
 var cls = {};
 
-cls.polymorph = function () {
+cls.polymorph = function (func) {
   return function () {
     if (typeof sync == 'undefined') {
       var sync = func;
