@@ -1,0 +1,48 @@
+{
+  "name": "nanopay-tools",
+  "version": "0.0.1",
+  "description": "Nanopay tools",
+  "keywords": [
+    "console",
+    "LoopBack",
+    "tasks",
+    "command line"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cajoy/nanopay-tools"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "bluebird": "^2.3.0"
+  },
+  "bugs": {
+    "url": "https://github.com/strongloop/nanopay-tools/issues"
+  },
+  "homepage": "https://github.com/strongloop/nanopay-tools",
+  "_npmUser": {
+    "name": "cajoy",
+    "email": "cajoy.dev@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "cajoy",
+      "email": "cajoy.dev@gmail.com"
+    }
+  ],
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Alex Struc",
+    "email": "cajoy.dev@gmail.com"
+  },
+  "license": "ISC",
+  "readme": "Loopback console tasks execution\n",
+  "readmeFilename": "Readme.MD",
+  "gitHead": "3ce9fff9a26d0a2c61688c26575988c42772bf94",
+  "_id": "nanopay-tools@0.0.1",
+  "_shasum": "1f0d57e886c3e9dc1f06512fa0bfa5253313eacc",
+  "_from": "nanopay-tools@*"
+}
