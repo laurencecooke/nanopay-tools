@@ -31,5 +31,5 @@ function tools(app) {
     };
   }
 
-  return cls;
+  return bluebird;
 }

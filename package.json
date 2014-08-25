@@ -1,6 +1,6 @@
 {
   "name": "nanopay-tools",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Nanopay tools",
   "keywords": [
     "console",
@@ -39,7 +39,7 @@
     "email": "cajoy.dev@gmail.com"
   },
   "license": "ISC",
-  "readme": "Loopback console tasks execution\n",
+  "readme": "Tools for node.js apps\n",
   "readmeFilename": "Readme.MD",
   "gitHead": "3ce9fff9a26d0a2c61688c26575988c42772bf94",
   "_id": "nanopay-tools@0.0.1",
