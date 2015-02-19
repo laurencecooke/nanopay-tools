@@ -38,7 +38,7 @@ cls.disableExcept = function (model, allowList) {
   })
 }
 
-cls.disableRealationExcept = function (model, relationType, relatedModelName, allowList) {
+cls.disableRelationExcept = function (model, relationType, relatedModelName, allowList) {
   var allList = {
     'hasMany': ['create', 'findById', 'delete', 'count', 'destroyById', 'get', 'updateById'],
     'belongsTo': ['get'],
