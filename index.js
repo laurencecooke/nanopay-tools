@@ -38,4 +38,32 @@ cls.disableExcept = function (model, allowList) {
   })
 }
 
+cls.disableRealationExcept = function (model, relationType, relatedModelName, allowList) {
+  var allList = {
+    'hasMany': ['create', 'findById', 'delete', 'count', 'destroyById', 'get', 'updateById'],
+    'belongsTo': ['get'],
+    'hasOne': ['get'],
+    'hasManyThrough': ['create', 'findById', 'delete', 'count', 'destroyById', 'get', 'updateById', 'exists', 'link', 'updateById', 'unlink']
+  }
+
+  var defaultList = allList[relationType];
+
+  var realtionsList = [];
+  var allowListCompiled = [];
+
+  allowList.forEach(function (name) {
+    allowListCompiled.push('__' + name + '__' + relatedModelName);
+  })
+
+  defaultList.forEach(function (name) {
+    realtionsList.push('__' + name + '__' + relatedModelName);
+  })
+
+  realtionsList.forEach(function (defaultRemote) {
+    if (allowListCompiled.indexOf(defaultRemote) === -1) {
+      model.disableRemoteMethod(defaultRemote, false);
+    }
+  })
+}
+
 module.exports = cls;
