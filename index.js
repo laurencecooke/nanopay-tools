@@ -1,9 +1,10 @@
 'use strict';
+
 /**
  * Different set of tools
  *
  * @company Nanopay inc.
- * @year 2014
+ * @year 2015
  * @author Alex Strutsynskyi cajoy.dev@gmail.com
  */
 var $promise = require('bluebird');
@@ -25,6 +26,16 @@ cls.polymorph = function (func) {
       return async.apply(this, arguments);
     }
   }
+}
+
+cls.disableExcept = function (model, allowList) {
+  var defaultList = ['create', 'upsert', 'exists', 'updateAll', 'findById', 'find', 'findOne', 'deleteById', 'count', 'prototype.updateAttributes'];
+
+  defaultList.forEach(function (defaultRemote) {
+    if (allowList.indexOf(defaultRemote) === -1) {
+      model.disableRemoteMethod(defaultRemote, true);
+    }
+  })
 }
 
 module.exports = cls;
