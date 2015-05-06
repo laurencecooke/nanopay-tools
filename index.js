@@ -28,6 +28,16 @@ cls.polymorph = function (func) {
   }
 }
 
+cls.extendDocs = function (model, method, doc) {
+  if (doc.notes) {
+    model.sharedClass.find(method, true).notes = doc.notes;
+  }
+
+  if (doc.description) {
+    model.sharedClass.find(method, true).description = doc.description;
+  }
+}
+
 cls.disableExcept = function (model, allowList) {
   var defaultList = ['create', 'upsert', 'exists', 'updateAll', 'findById', 'find', 'findOne', 'deleteById', 'count', 'prototype.updateAttributes'];
 

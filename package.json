@@ -1,6 +1,6 @@
 {
   "name": "nanopay-tools",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Nanopay tools",
   "keywords": [
     "console",
@@ -14,7 +14,7 @@
   },
   "main": "index.js",
   "dependencies": {
-    "bluebird": "^2.3.0"
+    "bluebird": "^2.9.25"
   },
   "bugs": {
     "url": "https://github.com/strongloop/nanopay-tools/issues"
