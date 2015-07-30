@@ -1,6 +1,6 @@
 {
   "name": "nanopay-tools",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Nanopay tools",
   "keywords": [
     "console",
@@ -30,9 +30,12 @@
       "email": "cajoy.dev@gmail.com"
     }
   ],
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "should": "^7.0.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/_mocha test/**/*.js --colors --reporter spec"
   },
   "author": {
     "name": "Alex Struc",

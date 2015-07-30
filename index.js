@@ -10,6 +10,7 @@
 var $promise = require('bluebird');
 
 var cls = {};
+var defaultRemotesList = ['create', 'upsert', 'exists', 'updateAll', 'findById', 'find', 'findOne', 'deleteById', 'count', 'prototype.updateAttributes'];
 
 cls.polymorph = function (func) {
   return function () {
@@ -38,10 +39,16 @@ cls.extendDocs = function (model, method, doc) {
   }
 }
 
-cls.disableExcept = function (model, allowList) {
-  var defaultList = ['create', 'upsert', 'exists', 'updateAll', 'findById', 'find', 'findOne', 'deleteById', 'count', 'prototype.updateAttributes'];
+cls.disableRemotes = function (model, disableList) {
+  disableList.forEach(function (remote) {
+    if (defaultRemotesList.indexOf(remote) !== -1) {
+      model.disableRemoteMethod(remote, true);
+    }
+  })
+}
 
-  defaultList.forEach(function (defaultRemote) {
+cls.disableExcept = function (model, allowList) {
+  defaultRemotesList.forEach(function (defaultRemote) {
     if (allowList.indexOf(defaultRemote) === -1) {
       model.disableRemoteMethod(defaultRemote, true);
     }
