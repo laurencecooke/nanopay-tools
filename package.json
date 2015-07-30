@@ -30,7 +30,10 @@
       "email": "cajoy.dev@gmail.com"
     }
   ],
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "should": "^7.0.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
